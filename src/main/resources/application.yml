@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost/sell?characterEncoding=utf-8&useSSL=false
+#    url: jdbc:mysql://192.168.43.102/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+    #返回给前台的值为null的话不显示
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: localhost
+#    host: 192.168.43.102
+    port: 6379
+server:
+  context-path: /sell
+  port: 10086
+
+#微信
+wechat:
+  #微信测试公众号的appid,和appsecret
+  mpAppId: wx4bf57cee56d8f4ed
+  mpAppSecret: ef6209a5841df20b5a6694aca5a15fee
+
+  mchId: 1483469312
+  mchKey: C5245D70627C1F8E9964D494B0735025
+
+  #微信开发平台
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+
+  #支付不需要证书，退款需要证书
+  keyPath: D:\IDEAproject\sell\src\main\resources\static\cert\h5.p12
+
+  #异步通知，没有写异步通知，不能发起支付
+  notifyUrl: http://nana.natapp1.cc/sell/pay/notify
+  templateId:
+    #测试公众号的模板Id
+    orderStatus: HSuWSjoZp_CTOlMFVyuOIiMCVcXeS7g4uzxYG1lF--Q
+projectUrl:
+  wechatMpAuthorize: http://nana.natapp1.cc
+  wechatOpenAuthorize: http://nana.natapp1.cc
+  sell: http://nana.natapp1.cc
+logging:
+  level:
+    com.university.dataobject.mapper: trace
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

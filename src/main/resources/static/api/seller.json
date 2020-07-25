@@ -1,0 +1,51 @@
+{
+  "errno": 0,
+  "data": {
+    "name": "南大粥吧",
+    "description": "软院专送",
+    "deliveryTime": 15,
+    "score": 4.2,
+    "serviceScore": 4.1,
+    "foodScore": 4.3,
+    "rankRate": 69.2,
+    "minPrice": 0,
+    "deliveryPrice": 0,
+    "ratingCount": 24,
+    "sellCount": 90,
+    "bulletin": "南大粥吧是良心店铺，好喝，营养，又健康（只对软院范围内进行配送，不对外开放配送服务）",
+    "supports": [
+      {
+        "type": 0,
+        "description": "在线支付满20减5"
+      },
+      {
+        "type": 1,
+        "description": "VC无限橙果汁全场8折"
+      },
+      {
+        "type": 2,
+        "description": "单人精彩套餐"
+      },
+      {
+        "type": 3,
+        "description": "该商家支持发票,请下单写好发票抬头"
+      },
+      {
+        "type": 4,
+        "description": "已加入“外卖保”计划,食品安全保障"
+      }
+    ],
+    "avatar": "https://butcher.oss-cn-shanghai.aliyuncs.com/ry.jpg",
+    "pics": [
+      "https://butcher.oss-cn-shanghai.aliyuncs.com/1.jpg",
+      "https://butcher.oss-cn-shanghai.aliyuncs.com/2.jpg",
+      "https://butcher.oss-cn-shanghai.aliyuncs.com/3.jpg"
+    ],
+    "infos": [
+      "该商家支持发票,请下单写好发票抬头",
+      "品类:其他菜系,包子粥店",
+      "南昌大学软件学院南京东路253号一食堂",
+      "营业时间:6:00-22:00"
+    ]
+  }
+}

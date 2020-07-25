@@ -1,0 +1,105 @@
+{
+  "errno": 0,
+  "data": [
+    {
+      "username": "吴叶全",
+      "rateTime": 1469281964000,
+      "deliveryTime": 30,
+      "score": 5,
+      "rateType": 0,
+      "text": "不错,粥很好喝,我经常吃这一家,非常赞,以后也会常来吃,强烈推荐.",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": [
+        "南瓜粥",
+        "皮蛋瘦肉粥"
+      ]
+    },
+    {
+      "username": "林就远",
+      "rateTime": 1469271264000,
+      "deliveryTime": "",
+      "score": 5,
+      "rateType": 0,
+      "text": "配送速度很棒!!!",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": [
+        "皮蛋瘦肉粥"
+      ]
+    },
+    {
+      "username": "云澈",
+      "rateTime": 1469261964000,
+      "score": 5,
+      "rateType": 0,
+      "text": "排骨很多，分量很足，值得尝一尝",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": [
+        "排骨玉米粥"
+      ]
+    },
+    {
+      "username": "茉莉",
+      "rateTime": 1469261864000,
+      "deliveryTime": 20,
+      "score": 5,
+      "rateType": 0,
+      "text": "良心店铺",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": [
+        "青菜瘦肉粥+煎蛋+牛肉饼"
+      ]
+    },
+    {
+      "username": "小燕",
+      "rateTime": 1469251264000,
+      "deliveryTime": 10,
+      "score": 5,
+      "rateType": 0,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": [
+        "南瓜粥"
+      ]
+    },
+    {
+      "username": "叶岚",
+      "rateTime": 1469241964000,
+      "deliveryTime": 70,
+      "score": 1,
+      "rateType": 1,
+      "text": "送货速度蜗牛一样，10点点的，11点左右才到！差评！！！",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "吴明",
+      "rateTime": 1469231964000,
+      "deliveryTime": 30,
+      "score": 1,
+      "rateType": 1,
+      "text": "很喜欢的粥店",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "黄铭",
+      "rateTime": 1469221264000,
+      "deliveryTime": "",
+      "score": 2,
+      "rateType": 1,
+      "text": "量太少了，不够吃！",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    },
+    {
+      "username": "琳娜",
+      "rateTime": 1469221264000,
+      "deliveryTime": "",
+      "score": 2,
+      "rateType": 1,
+      "text": "",
+      "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
+      "recommend": []
+    }
+  ]
+}
