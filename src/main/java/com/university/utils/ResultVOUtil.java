@@ -3,7 +3,7 @@ package com.university.utils;
 import com.university.VO.ResultVO;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 14:09
  */
 public class ResultVOUtil {

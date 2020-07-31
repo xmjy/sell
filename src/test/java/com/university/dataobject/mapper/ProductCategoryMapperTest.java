@@ -36,7 +36,7 @@ public class ProductCategoryMapperTest {
     public void insertByProductCategory() throws Exception{
 
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("林就远");
+        productCategory.setCategoryName("方翔鸣");
         productCategory.setCategoryType(105);
         int result = mapper.insertByProductCategory(productCategory);
         Assert.assertEquals(1,result);

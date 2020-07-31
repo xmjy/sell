@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 18:35
  */
 public interface OrderMasterRepository extends JpaRepository<OrderMaster,String> {

@@ -23,7 +23,7 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-26 16:05
  **/
 @Controller
@@ -56,7 +56,7 @@ public class SellerUserController {
         if (sellerInfo == null){
             map.put("msg",ResultEnum.LOGIN_FAIL.getMessage());
             //map.put("url","/sell/seller/order/list");
-            map.put("url","https://open.weixin.qq.com/connect/qrconnect?appid=wx6ad144e54af67d87&redirect_uri=http://sell.springboot.cn/sell/qr/oTgZpwWLWbM9BMBHeIPFqpWMmvWQ&response_type=code&scope=snsapi_login&state=http://nana.natapp1.cc/sell/wechat/qrUserInfo");
+            map.put("url","https://open.weixin.qq.com/connect/qrconnect?appid=wx6ad144e54af67d87&redirect_uri=http://sell.springboot.cn/sell/qr/oTgZpwS95v0zDjfgJ4HXBIVOZ0BE&response_type=code&scope=snsapi_login&state=http://university.natapp1.cc/sell/wechat/qrUserInfo");
             return new ModelAndView("common/error",map);
         }
         //2.设置token到redis里
@@ -88,7 +88,7 @@ public class SellerUserController {
         }
         map.put("msg",ResultEnum.LOGOUT_SUCCESS.getMessage());
         //map.put("url","/sell/seller/order/list");
-        map.put("url","https://open.weixin.qq.com/connect/qrconnect?appid=wx6ad144e54af67d87&redirect_uri=http://sell.springboot.cn/sell/qr/oTgZpwWLWbM9BMBHeIPFqpWMmvWQ&response_type=code&scope=snsapi_login&state=http://nana.natapp1.cc/sell/wechat/qrUserInfo");
+        map.put("url","https://open.weixin.qq.com/connect/qrconnect?appid=wx6ad144e54af67d87&redirect_uri=http://sell.springboot.cn/sell/qr/oTgZpwS95v0zDjfgJ4HXBIVOZ0BE&response_type=code&scope=snsapi_login&state=http://university.natapp1.cc/sell/wechat/qrUserInfo");
         return new ModelAndView("common/success",map);
     }
 

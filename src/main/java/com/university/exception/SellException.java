@@ -4,7 +4,7 @@ import com.university.enums.ResultEnum;
 import lombok.Getter;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/24 15:54
  */
 @Getter

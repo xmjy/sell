@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 商品(包含类目)
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 10:51
  */
 @Data

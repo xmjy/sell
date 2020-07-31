@@ -15,7 +15,7 @@ import java.util.Date;
 
 /**
  * 商品
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/18 11:05
  */
 @Entity

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/25 17:14
  */
 public class OrderMaster2OrderDTOConverter {

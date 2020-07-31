@@ -20,7 +20,7 @@ import java.util.List;
 
 /**
  * 商品
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/18 12:37
  */
 @Service
@@ -31,7 +31,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductInfoRepository repository;
 
     @Override
-//    @Cacheable(key = "123")
+    @Cacheable(key = "123")
     public ProductInfo findOne(String productId) {
         return repository.findOne(productId);
     }
@@ -49,6 +49,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+//    @CachePut(key = "123")
     public ProductInfo save(ProductInfo productInfo) {
         return repository.save(productInfo);
     }

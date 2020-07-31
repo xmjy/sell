@@ -153,7 +153,7 @@
     <script>
         var websocket = null;
         if ('WebSocket' in window){
-            websocket = new WebSocket('ws://nana.natapp1.cc/sell/webSocket');
+            websocket = new WebSocket('ws://university.natapp1.cc/sell/webSocket');
         }else {
             alert('该浏览器不支持websocket');
         }

@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * http请求返回的最外层对象
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 10:28
  */
 @Data

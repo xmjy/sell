@@ -14,12 +14,13 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/24 15:17
  */
 @Data
 //@JsonInclude(JsonInclude.Include.NON_NULL)//返回的结果有null的不显示给前台
 public class OrderDTO {
+
     /* 订单id */
     private String orderId;
 

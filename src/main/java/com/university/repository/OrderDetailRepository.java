@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 商品详情
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 18:39
  */
 public interface OrderDetailRepository extends JpaRepository<OrderDetail,String> {

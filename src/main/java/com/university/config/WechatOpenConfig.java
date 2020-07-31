@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-25 20:50
  **/
 @Component

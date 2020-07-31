@@ -1,7 +1,7 @@
 package com.university.constant;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-26 16:42
  **/
 public interface CookieConstant {

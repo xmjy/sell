@@ -20,7 +20,7 @@ public class SellerInfoRepositoryTest {
     public void save(){
         SellerInfo sellerInfo = new SellerInfo();
         sellerInfo.setSellerId(KeyUtil.getUniqueKey());
-        sellerInfo.setUsername("林就远");
+        sellerInfo.setUsername("方翔鸣");
         sellerInfo.setPassword("xm970829");
         sellerInfo.setOpenid("o9AREv8WgDU5-_l-qbwjn0b8bVfw");
 

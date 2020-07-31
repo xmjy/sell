@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import java.math.BigDecimal;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-22 17:08
  **/
 @Data

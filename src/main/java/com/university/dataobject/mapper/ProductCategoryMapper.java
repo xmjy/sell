@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-28 11:13
  **/
 public interface ProductCategoryMapper {

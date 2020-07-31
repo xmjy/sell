@@ -25,7 +25,7 @@ public class OrderMasterRepositoryTest {
     public void saveTest(){
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setOrderId("mao");
-        orderMaster.setBuyerName("毛紫慧");
+        orderMaster.setBuyerName("于欣欣");
         orderMaster.setBuyerPhone("13979347929");
         orderMaster.setBuyerAddress("五都兰田村");
         orderMaster.setBuyerOpenid("110110");

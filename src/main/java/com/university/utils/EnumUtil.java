@@ -3,7 +3,7 @@ package com.university.utils;
 import com.university.enums.CodeEnum;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-21 17:37
  **/
 public class EnumUtil {

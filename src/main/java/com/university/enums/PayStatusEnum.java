@@ -3,7 +3,7 @@ package com.university.enums;
 import lombok.Getter;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 18:26
  */
 @Getter

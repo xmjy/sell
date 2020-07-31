@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/24 15:12
  */
 public interface OrderService {

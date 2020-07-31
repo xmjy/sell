@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 /**
  * 商品详情
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 10:57
  */
 @Data

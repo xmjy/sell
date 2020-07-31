@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-22 13:15
  **/
 @Controller
@@ -65,7 +65,6 @@ public class SellerProductController {
      * @return
      */
     @GetMapping("/onSale")
-    @CacheEvict(cacheNames = "product",key = "123")
     public ModelAndView onSale(@RequestParam String productId,
                                Map<String,Object> map){
         try{
@@ -88,7 +87,6 @@ public class SellerProductController {
      */
 
     @GetMapping("/offSale")
-    @CacheEvict(cacheNames = "product",key = "123")
     public ModelAndView offSale(@RequestParam String productId,
                                Map<String,Object> map){
         try{
@@ -131,6 +129,7 @@ public class SellerProductController {
      * @return
      */
     @PostMapping("/save")
+//    @CachePut(cacheNames = "product",key = "123")
     @CacheEvict(cacheNames = "product",key = "123")
     public ModelAndView save(@Valid ProductForm form,
                              BindingResult bindingResult,
@@ -146,14 +145,11 @@ public class SellerProductController {
             //如果productId不为空，则表示修改，为空表示新增
             if (!StringUtils.isEmpty(form.getProductId())){
                 productInfo = productService.findOne(form.getProductId());
-                productService.save(productInfo);
             }else {
                 form.setProductId(KeyUtil.getUniqueKey());
-                BeanUtils.copyProperties(form,productInfo);
-                productInfo.setProductSale(0);
-                productInfo.setProductRating(0);
-                productService.save(productInfo);
             }
+            BeanUtils.copyProperties(form,productInfo);
+            productService.save(productInfo);
         }catch (SellException e){
             map.put("msg",e.getMessage());
             map.put("url","/sell/seller/product/index");

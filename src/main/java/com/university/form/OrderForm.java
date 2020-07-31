@@ -5,7 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * 用于表单验证
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/26 13:47
  */
 @Data

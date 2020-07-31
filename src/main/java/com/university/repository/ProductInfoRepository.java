@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 商品
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/18 11:24
  */
 public interface ProductInfoRepository extends JpaRepository<ProductInfo,String> {

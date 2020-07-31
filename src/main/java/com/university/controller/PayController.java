@@ -15,7 +15,7 @@ import java.net.URLDecoder;
 import java.util.Map;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-11 11:27
  **/
 @Controller
@@ -35,6 +35,7 @@ public class PayController {
 
 
         //1:查找订单，如果不存在则抛出一个异常
+//        orderId = "oTgZpwS95v0zDjfgJ4HXBIVOZ0BE";
         OrderDTO orderDTO = orderService.findOne(orderId);
         if (orderDTO == null){
             throw new SellException(ResultEnum.ORDER_NOT_EXIST);

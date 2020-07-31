@@ -5,13 +5,16 @@ import com.university.enums.PayStatusEnum;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 18:14
  */
 @Entity

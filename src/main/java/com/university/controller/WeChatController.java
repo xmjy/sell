@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.net.URLEncoder;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-08 11:00
  **/
 @RequestMapping("/wechat")
@@ -43,6 +43,7 @@ public class WeChatController {
         //2:调用方法
         String url = projectUrlConfig.getWechatMpAuthorize() + "/sell/wechat/userInfo";
         String redirectUrl = wxMpService.oauth2buildAuthorizationUrl(url,WxConsts.OAUTH2_SCOPE_BASE, URLEncoder.encode(returnUrl));
+//        String redirectUrl = wxMpService.oauth2buildAuthorizationUrl(url,WxConsts.OAUTH2_SCOPE_BASE, returnUrl);
         return "redirect:" + redirectUrl;
 
     }
@@ -61,7 +62,7 @@ public class WeChatController {
             throw new SellException(ResultEnum.WECHAT_MP_ERROR.getCode(),e.getError().getErrorMsg());
         }
 //         String openId = wxMpOAuth2AccessToken.getOpenId();
-        String openId = "oTgZpwWLWbM9BMBHeIPFqpWMmvWQ";
+        String openId = "oTgZpwS95v0zDjfgJ4HXBIVOZ0BE";
         //决定授权跳向地址
         return "redirect:" + returnUrl + "?openid="+openId;
 
@@ -82,7 +83,7 @@ public class WeChatController {
      */
     @GetMapping("/qrUserInfo")
     public String qrUserInfo(@RequestParam("code") String code,
-                             @RequestParam(value = "state",defaultValue = "http://nana.natapp1.cc/sell/seller/login") String returnUrl){
+                             @RequestParam(value = "state",defaultValue = "http://university.natapp1.cc/sell/seller/login") String returnUrl){
                              //@RequestParam(value = "state",defaultValue = "http://www.baidu.com") String returnUrl){
         /* 获得access token */
         WxMpOAuth2AccessToken wxMpOAuth2AccessToken = new WxMpOAuth2AccessToken();

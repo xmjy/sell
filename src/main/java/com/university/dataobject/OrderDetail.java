@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.math.BigDecimal;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 18:30
  */
 @Entity

@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-25 17:37
  **/
 @Data

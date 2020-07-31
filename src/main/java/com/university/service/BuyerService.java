@@ -4,7 +4,7 @@ import com.university.dto.OrderDTO;
 
 /**
  * 买家
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/26 21:15
  */
 public interface BuyerService {

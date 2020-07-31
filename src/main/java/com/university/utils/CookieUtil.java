@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * cookie工具类
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-26 16:38
  **/
 public class CookieUtil {

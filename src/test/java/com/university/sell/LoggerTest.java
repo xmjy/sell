@@ -15,8 +15,8 @@ public class LoggerTest {
 
     @Test
     public void test1(){
-        String  fxm="林就远";
-        String  mzh="毛紫慧";
+        String  fxm="方翔鸣";
+        String  mzh="于欣欣";
         log.debug("debug...");
         log.info("info...");
         log.error("error...");

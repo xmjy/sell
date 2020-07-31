@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/26 13:44
  */
 @RestController
@@ -87,18 +87,27 @@ public class BuyerOrderController {
     @GetMapping("/detail")
     public ResultVO<Order> detail(@RequestParam("openid") String openid,
                                   @RequestParam("orderId") String orderId){
+        //TODO 不安全的做法，待改进（已改进）
         OrderDTO orderDTO = buyerService.findOrderOne(openid,orderId);
         return ResultVOUtil.success(orderDTO);
 
     }
 
     //买家端取消订单，并且完成退款。
+//    @GetMapping("cancel")
     @PostMapping("cancel")
     public ResultVO cancel(@RequestParam("openid") String openid,
                            @RequestParam("orderId") String orderId){
+        //TODO 不安全的做法，待改进（已改进）
+        /* 取消订单*/
         buyerService.cancelOrder(openid,orderId);
+
+        /* 退款： 这里做一个判断，要是订单的支付状态是成功支付的话，才可以执行退款功能 */
         OrderDTO orderDTO = orderService.findOne(orderId);
-        payService.refund(orderDTO);
+//        if (orderDTO.getPayStatus() == 1){
+            payService.refund(orderDTO);
+//        }
+
         return ResultVOUtil.success();
     }
 }

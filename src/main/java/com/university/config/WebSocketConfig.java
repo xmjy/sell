@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-27 19:09
  **/
 @Component

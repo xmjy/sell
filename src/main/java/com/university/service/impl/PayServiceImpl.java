@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-11 12:56
  **/
 @Service
@@ -52,6 +52,10 @@ public class PayServiceImpl implements PayService {
 
     @Override
     public PayResponse notify(String notifyData) {
+        //1:验证签名
+        //2:支付的状态
+        //3:支付金额
+        //4：支付人(下单人 == 支付人)
         PayResponse payResponse = bestPayService.asyncNotify(notifyData);
         log.info("\r【微信支付】异步通知,payResponse={}",JsonUtil.toJson(payResponse));
 
@@ -91,6 +95,8 @@ public class PayServiceImpl implements PayService {
         log.error("【微信退款】 = {}",JsonUtil.toJson(refundRequest));
 
         RefundResponse refundResponse = bestPayService.refund(refundRequest);
+        //System.out.println("为啥空指针");
+        //System.out.println(refundRequest);
         log.error("【微信退款】 = {}",JsonUtil.toJson(refundResponse));
         return refundResponse;
 

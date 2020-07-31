@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/24 15:39
  */
 @Service
@@ -74,6 +74,7 @@ public class OrderServiceImpl implements OrderService {
             ProductInfo productInfo = productService.findOne(orderDetail.getProductId());
             if (productInfo == null){
                 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+                //throw new ResponseBankException();
             }
             //2:计算订单总价
             orderAmount = productInfo.getProductPrice()
@@ -81,9 +82,11 @@ public class OrderServiceImpl implements OrderService {
                     .add(orderAmount);
 
             //写入订单主表数据库(OrderDetail)
+            //每项订单详情id
             orderDetail.setDetailId(KeyUtil.getUniqueKey());
             //每项订单详情的订单id
             orderDetail.setOrderId(orderId);
+            //spring提高的一种属性拷贝方法，如下，eg:将productInfo的属性拷贝给orderDetail对象
             BeanUtils.copyProperties(productInfo,orderDetail);
             orderDetailRepository.save(orderDetail);
         }
@@ -97,11 +100,11 @@ public class OrderServiceImpl implements OrderService {
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
         orderMasterRepository.save(orderMaster);
 
+        //4:扣库存
         List<CartDTO> cartDTOList = orderDTO.getOrderDetailList().stream().map(e ->
                 new CartDTO(e.getProductId(),e.getProductQuantity()))
                 .collect(Collectors.toList());
 
-        //4:扣库存
         productService.decreaseStock(cartDTOList);
 
         //5:加销量
@@ -109,6 +112,9 @@ public class OrderServiceImpl implements OrderService {
 
         //发送websocket消息
         webSocket.sendMessage(orderDTO.getOrderId());
+
+        //推送微信模板消息
+//        pushMessageService.orderStatus(orderDTO);
 
         return orderDTO;
     }
@@ -145,12 +151,10 @@ public class OrderServiceImpl implements OrderService {
         return orderDTOPage;
     }
 
-
-    /**
-     * 卖家端取消订单，并且完成退款
-     */
     @Override
     @Transactional
+    /*
+    * 卖家端取消订单，并且完成退款*/
     public OrderDTO cancel(OrderDTO orderDTO) {
         OrderMaster orderMaster= new OrderMaster();
         //1:判断订单状态
@@ -184,6 +188,7 @@ public class OrderServiceImpl implements OrderService {
 
         //如果已支付，需要退款
         if (orderDTO.getPayStatus().equals(PayStatusEnum.SUCCESS.getCode())){
+            //TODO
             payService.refund(orderDTO);
         }
         //订单取消———》》》推送微信模板消息
@@ -211,7 +216,7 @@ public class OrderServiceImpl implements OrderService {
             throw new SellException(ResultEnum.ORDER_UPDATE_FAIL);
         }
 
-        //订单完结——》》》推送微信模板消息
+        //订单取消——》》》推送微信模板消息
         pushMessageService.orderStatus(orderDTO);
 
         return orderDTO;

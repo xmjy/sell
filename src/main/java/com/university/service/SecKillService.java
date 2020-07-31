@@ -1,7 +1,7 @@
 package com.university.service;
 
 /**
- * Created by 林就远
+ * Created by 方翔鸣
  * 2017-08-06 23:18
  */
 public interface SecKillService {

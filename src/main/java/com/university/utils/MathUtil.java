@@ -1,7 +1,7 @@
 package com.university.utils;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-12 20:26
  **/
 public class MathUtil {

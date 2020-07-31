@@ -22,9 +22,10 @@ import java.util.stream.Collectors;
 
 /**
  * 买家商品
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/23 10:20
  */
+/* 返回的是json格式，所以用restcontroller注释 */
 @RestController
 @RequestMapping("/buyer/product")
 public class BuyerProductController {
@@ -36,12 +37,18 @@ public class BuyerProductController {
     private CategoryService categoryService;
 
     @GetMapping("/list")
-    @Cacheable(cacheNames = "product",key = "123")
+//    @Cacheable(cacheNames = "product",key = "123")
     public ResultVO list(){
         //1.查询所有的上架商品
         List<ProductInfo> productInfoList = productService.findUpAll();
 
-        //2.查询类目
+        //2.查询类目(一次性查询)
+        //List<Integer> categoryTypeList = new ArrayList<>();
+        //传统方法
+        /*for(ProductInfo productInfo : productInfoList){
+            categoryTypeList.add(productInfo.getCategoryType());
+        }*/
+        //精简方法
         List<Integer> categoryTypeList =  productInfoList.stream()
                 .map(e -> e.getCategoryType())
                 .collect(Collectors.toList());

@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/26 21:17
  */
 @Service
@@ -38,7 +38,7 @@ public class BuyerServiceImpl implements BuyerService {
 
     private OrderDTO checkOrderOwner(String openid,String orderId){
         //通过写死openid
-        openid="oTgZpwWLWbM9BMBHeIPFqpWMmvWQ";
+        openid="oTgZpwS95v0zDjfgJ4HXBIVOZ0BE";
 
         OrderDTO orderDTO = orderService.findOne(orderId);
         if (orderDTO == null){

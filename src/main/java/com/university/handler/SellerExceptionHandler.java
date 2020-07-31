@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-27 11:20
  **/
 @ControllerAdvice
@@ -27,13 +27,13 @@ public class SellerExceptionHandler {
     //拦截登录异常
     @ExceptionHandler(value = SellerAuthorizeException.class)
     public ModelAndView handlerAuthorizeException(){
-        return new ModelAndView("redirect:"
-                +"https://open.weixin.qq.com/connect/qrconnect?" +
-                "appid=wx6ad144e54af67d87&redirect_uri=" +
-                "http://sell.springboot.cn/sell/qr/" +
-                "oTgZpwWLWbM9BMBHeIPFqpWMmvWQ&response_type=code&" +
-                "scope=snsapi_login&state=" +
-                "http://nana.natapp1.cc/sell/wechat/qrUserInfo");
+        return new ModelAndView("redirect:"/*
+                .concat(projectUrlConfig.getWechatOpenAuthorize())
+                .concat("/sell/wechat/qrAuthorize")
+                .concat("?returnUrl=")
+                .concat(projectUrlConfig.getSell())
+                .concat("/sell/seller/login"));*/
+                +"https://open.weixin.qq.com/connect/qrconnect?appid=wx6ad144e54af67d87&redirect_uri=http://sell.springboot.cn/sell/qr/oTgZpwS95v0zDjfgJ4HXBIVOZ0BE&response_type=code&scope=snsapi_login&state=http://university.natapp1.cc/sell/wechat/qrUserInfo");
     }
 
     @ExceptionHandler(value = SellException.class)

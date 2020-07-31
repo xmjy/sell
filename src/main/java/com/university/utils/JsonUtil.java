@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-13 7:42
  **/
 public class JsonUtil {

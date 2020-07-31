@@ -12,8 +12,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by 林就远
- * 2019-03-06 23:18
+ * Created by 方翔鸣
+ * 2017-08-06 23:18
  */
 @Service
 public class SecKillServiceImpl implements SecKillService {

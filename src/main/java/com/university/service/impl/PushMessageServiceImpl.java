@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 消息推送
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-27 16:32
  **/
 @Service
@@ -34,14 +34,14 @@ public class PushMessageServiceImpl implements PushMessageService {
     public void orderStatus(OrderDTO orderDTO) {
         WxMpTemplateMessage templateMessage = new WxMpTemplateMessage();
         //测试公众号的模板id
-        templateMessage.setTemplateId(accountConfig.getTemplateId().get("orderStatus"));
+        templateMessage.setTemplateId(accountConfig.getTemplateId().get("orderStatus2"));
         //消息推送给谁,本人的测试公众号openid
         templateMessage.setToUser("oQ1Rf1b0Z6Fi4KWG08ghPxjR3W5s");
         //主要的数据
         List<WxMpTemplateData> data = Arrays.asList(
                 new WxMpTemplateData("first","亲，记得收货"),
-                new WxMpTemplateData("keyword1","林就远美食店"),
-                new WxMpTemplateData("keyword2","1398582478"),
+                new WxMpTemplateData("keyword1","翔鸣美食店"),
+                new WxMpTemplateData("keyword2","13979347929"),
                 new WxMpTemplateData("keyword3",orderDTO.getOrderId()),
                 new WxMpTemplateData("keyword4",orderDTO.getBuyerName()),
                 new WxMpTemplateData("keyword5",orderDTO.getBuyerPhone()),

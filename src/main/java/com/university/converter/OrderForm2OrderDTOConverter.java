@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/26 14:03
  */
 @Slf4j
@@ -28,7 +28,7 @@ public class OrderForm2OrderDTOConverter {
         orderDTO.setBuyerAddress(orderForm.getAddress());
         //借号支付调试
 //        orderDTO.setBuyerOpenid(orderForm.getOpenid());
-        orderDTO.setBuyerOpenid("oTgZpwWLWbM9BMBHeIPFqpWMmvWQ");
+        orderDTO.setBuyerOpenid("oTgZpwS95v0zDjfgJ4HXBIVOZ0BE");
         List<OrderDetail> orderDetailList = null;
         try {
             orderDetailList = gson.fromJson(orderForm.getItems(),

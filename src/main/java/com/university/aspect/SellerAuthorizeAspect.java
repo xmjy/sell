@@ -19,7 +19,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-27 11:08
  **/
 @Aspect

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * @author 林就远
+ * @author 方翔鸣
  * @create 2019-03-11 13:15
  **/
 @Component
@@ -31,7 +31,7 @@ public class WechatPayConfig {
         wxPayH5Config.setAppSecret(accountConfig.getMpAppSecret());
         wxPayH5Config.setMchId(accountConfig.getMchId());
         wxPayH5Config.setMchKey(accountConfig.getMchKey());
-        wxPayH5Config.setKeyPath(accountConfig.getKeyPath());
+        wxPayH5Config.set(accountConfig.get());
         wxPayH5Config.setNotifyUrl(accountConfig.getNotifyUrl());
         return wxPayH5Config;
     }

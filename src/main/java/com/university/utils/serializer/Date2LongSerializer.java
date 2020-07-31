@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Date;
 
 /**
- * @auther 林就远
+ * @auther 方翔鸣
  * @date 2019/2/26 20:43
  */
 public class Date2LongSerializer extends JsonSerializer<Date> {
